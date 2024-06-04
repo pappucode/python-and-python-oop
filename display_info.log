@@ -1,0 +1,5 @@
+INFO:root:Ran with args: ('Hank', 25), and kwargs: {}
+INFO:root:Ran with args: (), and kwargs: {'name': 'Alice', 'age': 30}
+INFO:root:Ran with args: ('Akondo',), and kwargs: {'age': 31}
+INFO:root:Ran with args: ('Akondo',), and kwargs: {'age': 31}
+INFO:root:Ran with args: ('Pappu Akondo',), and kwargs: {'age': 32}
