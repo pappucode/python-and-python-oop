@@ -14,10 +14,8 @@ print(f)
 # print(f(5))
 
 
-
 # def cube(x):
 #     return x * x * x
-
 
 # def my_map(func, arg_list):
 #     result = []
@@ -27,6 +25,7 @@ print(f)
 
 # squares = my_map(cube, [1,2,3,4,5])
 # print(squares)
+
 
 # def logger(msg):
 

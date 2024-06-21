@@ -28,26 +28,27 @@ class Employee:
 
 emp_1 = Employee("Pappu", "Akondo", 50000)
 emp_2 = Employee("Test", "User", 60000)
-#print(emp_1)
+
+# print(emp_1)
 
 # print(repr(emp_1))
 # print(str(emp_1))
 
-# # Direct calling the methods
+## Direct calling the methods
 # print(emp_1.__repr__())
 # print(emp_1.__str__())
 
 # print(1+2)
-# # Provide the same result
+## Provide the same result
 # print(int.__add__(1,2))
 
 # print()
 
 # print("a" + "b")
-# # Provide the same result
+## Provide the same result
 # print(str.__add__('a', 'b'))
 
-# print(emp_1 + emp_2)
+#print(emp_1 + emp_2)
 
 print(len("test"))
 print("test".__len__())

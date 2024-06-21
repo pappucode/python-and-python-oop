@@ -24,14 +24,14 @@ class Employee:
         self.first = None
         self.last = None
 
-emp_1 = Employee("Pappu", "Akondo")
+# emp_1 = Employee("Pappu", "Akondo")
 
-#emp_1.first = 'Jim'
+# emp_1.first = 'Jim'
 
-emp_1.fullname = "Rabiul Islam"
+# emp_1.fullname = "Rabiul Islam"
 
-print(emp_1.first)
-print(emp_1.email)
-print(emp_1.fullname)
+# print(emp_1.first)
+# print(emp_1.email)
+# print(emp_1.fullname)
 
-del emp_1.fullname
+#del emp_1.fullname

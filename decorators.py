@@ -9,8 +9,8 @@
 #     print('display function run')
     
 # ## Actually @decorator_function doing same like the below 2 lines.    
-# # display = decorator_function(display)
-# # display()
+# # decorator_display = decorator_function(display)
+# # decorator_display()
 
 # @decorator_function
 # def display_info(name, age):
@@ -19,9 +19,11 @@
 # display_info('John', 25)
 # display()
 
+
 ## Practical demonstration of decorator function
 from functools import wraps
 
+# Decorator
 def my_logger(orig_func):
     import logging
     logging.basicConfig(filename='{}.log'.format(orig_func.__name__), level=logging.INFO)
@@ -34,6 +36,7 @@ def my_logger(orig_func):
 
     return wrapper
 
+# Decorator
 def my_timer(orig_func):
     import time
 
