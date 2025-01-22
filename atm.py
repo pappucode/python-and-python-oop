@@ -1,9 +1,38 @@
 class Atm:
+
+    #static/class variable
+    __counter = 1
     
     def __init__(self):
-        self.pin = ""
-        self.balance = 0
-        self.menu()
+
+        # Instance variable
+        self.__pin = ""
+        self.__balance = 0
+        #self.menu()
+        self.sno = Atm.counter
+        Atm.__counter = Atm.__counter + 1
+
+    @staticmethod
+    def get_counter():
+        return Atm.__counter
+
+    @staticmethod
+    def set_counter(new):
+        if type(new)==int:
+            Atm.__counter = new
+        else:
+            print("Not allowed")
+
+    def get_pin(self):
+        return self.__pin
+
+    def set_pin(self, new_pin):
+        if type(new_pin) == str:
+            self.__pin = new_pin
+            print("Pin changed")
+        else:
+            print("Not allowed")
+
 
     def menu(self):
         user_input = input("""
@@ -27,14 +56,14 @@ class Atm:
             print("Bye!!")
 
     def create_pin(self):
-        self.pin = input("Enter your pin")
+        self.__pin = input("Enter your pin")
         print("Pin set successfully!")
         self.menu()
     def deposit(self):
         temp = input("Enter your pin")
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input("Enter the amount"))
-            self.balance = self.balance + amount
+            self.__balance = self.__balance + amount
             print("Deposit successful")
         else:
             print("Invalid pin")
@@ -42,10 +71,10 @@ class Atm:
 
     def withdraw(self):
         temp = input("Enter your pin")
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input("Enter the amount"))
-            if amount < self.balance:
-                self.balance = self.balance - amount
+            if amount < self.__balance:
+                self.__balance = self.__balance - amount
                 print("withdraw successful")
             else:
                 print("Insufficient funds") 
@@ -55,11 +84,19 @@ class Atm:
 
     def check_balance(self):
         temp = input("Enter your pin")
-        if temp == self.pin:
-            print(self.balance)
+        #self._Atm__balance = 30000 #fghsdf
+        if temp == self.__pin:
+            print(self.__balance)
         else:
             print("Invalid pin")
         self.menu()
 
-dbl = Atm() 
+dbl = Atm()
+sbl =Atm()
+
+print(dbl.sno)
+print(sbl.sno)
+
+print(dbl.set_pin(1234))
+print(dbl.get_pin())
 print(dbl)
